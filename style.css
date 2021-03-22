@@ -1,0 +1,499 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Lobster&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+  font-family: "Heebo", sans-serif;
+  list-style: none;
+}
+body {
+  width: 100vw;
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+.landing {
+  height: 100vh;
+  width: 100vw;
+  background: url(/imag/bg.jpg) no-repeat center / cover;
+  position: relative;
+}
+.land-wav {
+  width: 100vw;
+}
+.container .landing svg {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 200px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(9, 9, 38, 0.427);
+  padding: 15px 30px;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 2000;
+}
+nav .logo h2 {
+  font-family: "Lobster", cursive;
+  letter-spacing: 3px;
+  user-select: none;
+}
+nav .menu ul {
+  display: flex;
+  text-decoration: none;
+}
+nav .menu > ul li {
+  margin: 0 10px;
+  transition: 0.1s;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+nav .menu > ul li:hover {
+  color: rgba(255, 255, 255, 0.653);
+  border-bottom: 2px solid rgb(103, 1, 1);
+}
+section {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+section > h2 {
+  padding-top: 150px;
+}
+section p {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.763);
+}
+
+#about {
+  width: 80%;
+  height: auto;
+  min-height: 70vh;
+  padding: 10px 30px;
+  margin: 10px auto;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.53);
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+#about > p {
+  margin: 10px 0;
+  text-align: justify;
+}
+#about > p:nth-child(1) {
+  margin-top: 40px;
+}
+#about img {
+  height: 300px;
+  width: 250px;
+  float: right;
+  shape-outside: url("/imag/Nugagee port full New.png");
+  margin-left: 10px;
+  shape-margin: 10px;
+}
+#portfolio {
+  padding: 20px;
+}
+.container p {
+  color: black;
+}
+
+#portfolio > h1,
+#about h2,
+#plans > h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  position: relative;
+  color: #37517e;
+  text-transform: uppercase;
+}
+
+#portfolio > h1::before,
+#about h2::before,
+#plans > h2::before {
+  content: "";
+  width: 15%;
+  height: 4px;
+  background-color: rgb(241, 232, 232);
+  position: absolute;
+  bottom: -10px;
+  left: 42.5%;
+}
+
+#portfolio > h1::after,
+#about h2::after,
+#plans > h2::after {
+  content: "";
+  width: 6%;
+  height: 4px;
+  background-color: #47b2e4;
+  position: absolute;
+  bottom: -10px;
+  left: 47.5%;
+}
+#portfolio .container {
+  padding-top: 30px;
+}
+#portfolio .category {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px;
+}
+#portfolio .category a {
+  padding: 8px 15px;
+  font-size: 19px;
+  color: #000;
+  border-radius: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: 5px;
+}
+#portfolio .category a.active {
+  background-color: #47b2e4;
+  color: #fff;
+}
+#portfolio .category a:hover {
+  background-color: #47b2e4;
+  color: #fff;
+}
+#portfolio .my-work {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+#portfolio .my-work > div {
+  height: 250px;
+  overflow: hidden;
+}
+#portfolio .my-work .pic {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#portfolio .pic h2 {
+  padding: 90px 20px;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  left: -100%;
+  transition: 1s;
+}
+#portfolio .pic:hover {
+  width: 120%;
+  height: 120%;
+  transform: translate(-10%, -10%);
+}
+#portfolio .pic:hover h2 {
+  left: 0%;
+}
+#portfolio .pic h2 i {
+  margin-top: 10px;
+  color: #47b2e4;
+  transition: 0.5s;
+  padding: 10px;
+  border-radius: 30px;
+}
+#portfolio .pic h2 i:hover {
+  background-color: #47b2e4;
+  color: #fff;
+}
+#portfolio .my-work .pic img {
+  width: 100%;
+  height: 100%;
+}
+
+/* //popup box */
+#portfolio .popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1200;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+#portfolio .popup img {
+  width: 80%;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#portfolio .popup i {
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  right: 7%;
+  transition: 0.3s;
+}
+#portfolio .popup i:hover {
+  color: red;
+}
+.container #plans {
+  position: relative;
+  width: 90vw;
+  height: auto;
+  min-height: 80vh;
+  margin: 20px auto;
+  margin-top: 450px;
+}
+.container #plans > h2 {
+  margin-top: 30px;
+}
+.container #plans > p {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  line-height: 20px;
+  color: rgb(126, 115, 115);
+  font-size: 2rem;
+}
+.container #plans > .category2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #47b2e4dd;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.496);
+  padding: 5px 0;
+}
+.container #plans > .category2 > a {
+  margin: 0 10px;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  color: #fff;
+  cursor: pointer;
+}
+.container #plans > .category2 > a:nth-child(2),
+.container #plans > .category2 > a:nth-child(3),
+.container #plans > .category2 > a:nth-child(4) {
+  border-left: 1px solid rgb(126, 115, 115);
+}
+.container #plans > .category2 > a.active {
+  color: red;
+}
+#plans .plan-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  justify-content: center;
+  margin: 50px auto;
+}
+#plans .plan-card p {
+  font-size: 0.8rem;
+}
+#plans .plan-card .plan-det {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.263);
+  padding: 20px 20px;
+  border-radius: 10px;
+  min-height: 250px;
+  height: auto;
+  position: relative;
+}
+#plans .plan-card .plan-det::after {
+  content: "60% Off";
+  position: absolute;
+  left: 15px;
+  top: -5%;
+  height: 25px;
+  width: 60px;
+  background: rgba(255, 64, 64, 0.9);
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.263);
+}
+#plans .plan-card .plan-det h3 {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.886);
+  line-height: 20px;
+}
+#plans .plan-card .plan-det i {
+  margin-right: 5px;
+  color: rgba(0, 0, 0, 0.886);
+}
+#plans .plan-card .plan-det p {
+  color: rgb(126, 115, 115);
+  word-spacing: 10px;
+  margin: 10px 0;
+}
+#plans .plan-card .plan-det h4 {
+  font-size: 50px;
+}
+#plans .plan-card .plan-det h4 > sup {
+  font-size: 25px;
+}
+#plans .plan-card .plan-det h5 {
+  color: rgb(126, 115, 115);
+  text-decoration: line-through;
+}
+#plans .plan-card .plan-det h6 {
+  color: red;
+  line-height: 40px;
+  font-weight: 500;
+}
+#plans .plan-card .plan-det button {
+  background: rgb(191, 4, 4);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 40px;
+  font-weight: 500;
+  cursor: pointer;
+}
+#plans .plan-card .plan > p {
+  font-size: 11px;
+  color: rgb(126, 115, 115);
+  margin: 10px 0;
+  margin-bottom: 5px;
+}
+#plans .plan-card .plan > a {
+  font-size: 12px;
+  color: red;
+  text-decoration: none;
+}
+#plans .plan-card .plan > a:hover {
+  text-decoration: underline;
+}
+footer {
+  width: 100vw;
+  height: 200px;
+  text-align: center;
+  color: #fff;
+  background-color: #505050;
+  padding-top: 50px;
+}
+
+footer h3 {
+  letter-spacing: 5px;
+  font-size: 1.4rem;
+}
+footer p {
+  font-size: 0.7rem;
+}
+
+footer .social a {
+  margin: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+footer .social a i {
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px 0;
+  color: #505050;
+  transition: all 0.3s ease;
+}
+
+footer .social a:hover i {
+  transform: translateY(-3px);
+}
+footer .social a:active i {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+@media screen and (max-width: 850px) {
+  #portfolio .my-work {
+    min-height: 80vh;
+  }
+  #portfolio .my-work {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #portfolio .popup i {
+    right: 6%;
+  }
+  .container #plans {
+    margin-top: 950px;
+  }
+  .container .landing svg {
+    bottom: -45px;
+  }
+}
+@media screen and (max-width: 510px) {
+  nav {
+    flex-direction: column;
+    padding: 5px 30px;
+  }
+  nav .logo h2 {
+    font-size: 18px;
+  }
+  nav .menu > ul li {
+    font-size: 15px;
+  }
+  .container .landing svg {
+    bottom: -55px;
+  }
+  #portfolio .my-work {
+    min-height: 80vh;
+  }
+  #portfolio .my-work {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #portfolio .popup img {
+    width: 80%;
+    height: 50vh;
+  }
+  #portfolio .popup i {
+    top: 20%;
+    right: 7%;
+  }
+  .container #plans {
+    margin-top: 2050px;
+  }
+  .container #plans > p {
+    font-size: 1.5rem;
+  }
+  .container #plans > .category2 {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+  #plans .plan-card {
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+  }
+}
